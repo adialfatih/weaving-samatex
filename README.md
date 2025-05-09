@@ -1,6 +1,6 @@
 ## 🧾 Textile Factory Workflow System
 
-Sistem ini merupakan aplikasi manajemen alur produksi dan distribusi untuk pabrik tekstil (weaving) yang mencakup proses dari inspeksi kain, folding, hingga penyimpanan di gudang dan penjualan kepada customer. Selain itu, sistem ini juga menangani pencatatan hutang-piutang secara menyeluruh dan akurat.
+Aplikasi ini dirancang untuk mendigitalisasi alur kerja pabrik tekstil (weaving) mulai dari proses inspeksi kain, pelipatan, penyimpanan ke gudang, hingga penjualan ke customer dan pencatatan hutang-piutang. Sistem ini terdiri dari webapp untuk admin dan progressive web app (PWA) untuk operator kain dan bagian gudang, sehingga semua data tercatat secara real-time dan efisien.
 
 ### 🔧 Fitur Utama
 - **Inspeksi Kain:** Pendataan hasil produksi dengan input dari operator langsung melalui PWA.
