@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sesi Operator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<body>
+    <div class="full-device">
+        <div class="rows center" id="judul">
+            <h2>PT. Salam Mandiri Textile</h2>
+        </div>
+        <div class="kotakan">
+            <div class="input-kotak" id="ig">
+                INSPECT GREY
+            </div>
+            <div class="input-kotak" id="fg">
+                FOLDING GREY
+            </div>
+        </div>
+        <div class="kotakan">
+            <div class="input-kotak" id="iff">
+                INSPECT FINISH
+            </div>
+            <div class="input-kotak" id="ff">
+                FOLDING FINISH
+            </div>
+        </div>
+        <div class="rows center">
+            <div class="ipt-user">
+                <label for="iduser">Masukan Nama Anda</label>
+                <input type="text" name="iduser" class="iduser" id="iduser" placeholder="..  ..  ..  ..  ..  .." autofocus>
+            </div>
+        </div>
+        <input type="hidden" name="proses" id="proses" value="0">
+        <div class="rows center">
+            <button class="btn-login" id="btn-submit">Submit</button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+        var button1 = document.getElementById("ig");
+        var button2 = document.getElementById("fg");
+        var button3 = document.getElementById("iff");
+        var button4 = document.getElementById("ff");
+        var submit = document.getElementById("btn-submit");
+  
+        button1.addEventListener("click", function() {
+            button1.classList.add("active");
+            button2.classList.remove("active");
+            button3.classList.remove("active");
+            button4.classList.remove("active");
+            document.getElementById("proses").value = 'ig';
+        });
+        button2.addEventListener("click", function() {
+            button2.classList.add("active");
+            button1.classList.remove("active");
+            button3.classList.remove("active");
+            button4.classList.remove("active");
+            document.getElementById("proses").value = 'fg';
+        });
+        button3.addEventListener("click", function() {
+            button3.classList.add("active");
+            button2.classList.remove("active");
+            button1.classList.remove("active");
+            button4.classList.remove("active");
+            document.getElementById("proses").value = 'iff';
+        });
+        button4.addEventListener("click", function() {
+            button4.classList.add("active");
+            button2.classList.remove("active");
+            button3.classList.remove("active");
+            button1.classList.remove("active");
+            document.getElementById("proses").value = 'ff';
+        });
+        submit.addEventListener("click", function() {
+            //peringatan('oke bos jadi');
+            var proses = document.getElementById("proses").value;
+            var namaUser = document.getElementById("iduser").value;
+            if(proses==0){
+                peringatan('Anda belum memilih proses produksi.!')
+            }
+            if(namaUser==""){
+                peringatan('Masukan nama anda ...!!')
+            }
+            if(proses!=0 && namaUser!=""){
+                suksestoast('beres tinggal proses');
+            }
+        });
+            function peringatan(txt) {
+                Toastify({
+                    text: ""+txt+"",
+                    duration: 4000,
+                    close:true,
+                    gravity:"bottom",
+                    position: "right",
+                    backgroundColor: "#cc214e",
+                }).showToast();
+            }
+            function suksestoast(txt){
+                Toastify({
+                    text: ""+txt+"",
+                    duration: 3000,
+                    close:true,
+                    gravity:"bottom",
+                    position: "right",
+                    backgroundColor: "#4fbe87",
+                }).showToast();
+            }
+    </script>
+</body>
+</html>

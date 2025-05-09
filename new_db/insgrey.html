@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Inspect Grey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.02.min.css">
+    <style>
+       
+        .autoComplete_wrapper input{
+            width: 95%;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Produksi Inspect Grey</h1>
+    <small class="sm">Tanggal : <strong>20 Juli 2023</strong> Operator : <strong>Nur Hikmah</strong></small>
+    <div class="container">
+        <div class="form-label">
+            <label for="autoComplete">Konstruksi</label>
+            <div class="autoComplete_wrapper">
+                <input id="autoComplete" type="search" dir="ltr" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off">
+            </div>
+            <!-- <input type="text" class="ipt" name="kons" id="kons" autofocus> -->
+        </div>
+        <div class="inforsblm">
+            tes
+        </div>
+        <div class="form-label">
+            <label for="mc">Nomor Mesin</label>
+            <input type="text" class="ipt" name="mc" id="mc" placeholder="Masukan nomor mesin">
+        </div>
+        <div class="form-label">
+            <label for="beam">Nomor Beam</label>
+            <input type="text" class="ipt" name="beam" id="beam" placeholder="Masukan nomor beam">
+        </div>
+        <div class="form-label">
+            <label for="oka">OKA</label>
+            <input type="text" class="ipt" name="oka" id="oka" placeholder="Input oka">
+        </div>
+        <div class="form-label">
+            <label for="ukuran">Ukuran</label>
+        </div>
+        <div class="form-ukuran">
+            <input type="text" id="ukuran" name="ukuran" placeholder="Masukan Ukuran">
+            <small>Meter</small>
+        </div>
+        <div class="box-bs-bp">
+            <div>
+                <label for="bs"><strong>Ukuran BS</strong></label>
+                <input type="text" name="bs" id="bs" placeholder="BS">
+            </div>
+            <div>
+                <label for="bs"><strong>Ukuran BS</strong></label>
+                <input type="text" name="bs" id="bs" placeholder="BP">
+            </div>
+        </div>
+        <button class="btn-save">Simpan</button>
+        <div class="fortable">
+            <table>
+                <tr>
+                    <td>No.</td>
+                    <td>Kode Roll</td>
+                    <td>Konstruksi</td>
+                    <td>MC</td>
+                    <td>Ukuran</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>SB2192</td>
+                    <td>SM03</td>
+                    <td>10s</td>
+                    <td>299.98</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <script>
+        const autoCompleteJS = new autoComplete({
+            placeHolder: "Ketik Konstruksi...",
+            data: {
+                src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+                cache: true,
+            },
+            resultItem: {
+                highlight: true
+            },
+            events: {
+                input: {
+                    selection: (event) => {
+                        const selection = event.detail.selection.value;
+                        autoCompleteJS.input.value = selection;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

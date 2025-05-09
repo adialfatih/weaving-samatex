@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Vithkuqi&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.02.min.css">
+    <style>
+        .autoComplete_wrapper input{
+            width: 95%;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="konten-mobile">
+        <h1>Dashboard</h1>
+        <div class="card-awal blue">
+            <div class="items">Penjualan : </div>
+            <div class="items-nilai">
+                198.710
+                <span>Senin, 8 Agustus 2023</span>
+            </div>
+            <div class="items-dobel">
+                <div class="dobel green">
+                    Grey : 90.000
+                </div>
+                <div class="dobel red">
+                    Finish : 90.000
+                </div>
+            </div>
+        </div>
+        <div class="card-awal blue">
+            <div class="items">Stok : </div>
+            <div class="items-nilai">
+                198.710
+            </div>
+            <div class="items-dobel">
+                <div class="dobel green">
+                    Grey : 90.000
+                </div>
+                <div class="dobel red">
+                    Finish : 90.000
+                </div>
+            </div>
+        </div>
+        <div class="card-awal blue">
+            <div class="items">Produksi : </div>
+            <div class="items-nilai">
+                198.710
+                <span>Minggu, 7 Agustus 2023</span>
+            </div>
+            <div class="items-dobel">
+                <div class="dobel green">
+                    Grey : 90.000
+                </div>
+                <div class="dobel red">
+                    Finish : 90.000
+                </div>
+            </div>
+        </div>
+        <div class="card-awal blue">
+            <div class="items">Produksi : </div>
+            <div class="items-nilai">
+                198.710
+                <span>Minggu, 7 Agustus 2023</span>
+            </div>
+            <div class="items-dobel">
+                <div class="dobel green">
+                    Grey : 90.000
+                </div>
+                <div class="dobel red">
+                    Finish : 90.000
+                </div>
+            </div>
+        </div>
+        <div class="card-awal blue">
+            <div class="items">Produksi : </div>
+            <div class="items-nilai">
+                198.710
+                <span>Minggu, 7 Agustus 2023</span>
+            </div>
+            <div class="items-dobel">
+                <div class="dobel green">
+                    Grey : 90.000
+                </div>
+                <div class="dobel red">
+                    Finish : 90.000
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/autoComplete.min.js"></script>
+    <script>
+        const autoCompleteJS = new autoComplete({
+            placeHolder: "Ketik Konstruksi...",
+            data: {
+                src: ["Sauce - Thousand Island", "Wild Boar - Tenderloin", "Goat - Whole Cut"],
+                cache: true,
+            },
+            resultItem: {
+                highlight: true
+            },
+            events: {
+                input: {
+                    selection: (event) => {
+                        const selection = event.detail.selection.value;
+                        autoCompleteJS.input.value = selection;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

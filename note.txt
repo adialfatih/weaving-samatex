@@ -1,0 +1,7 @@
+UPDATE tb_konstruksi SET stok_ig='0',stok_fg='0',stok_if='0',stok_ff='0',stok_bs='0',stok_bp='0',stok_bs2='0',stok_bp2='0',stok_crt='0';
+
+
+
+table baru a_nota
+table bari a_nota_bayar
+tambah field di surat_jalan
